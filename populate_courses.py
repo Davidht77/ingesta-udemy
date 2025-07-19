@@ -102,7 +102,6 @@ class CourseGenerator:
             'descripcion': descripcion,
             'instructor': random.choice(self.instructors),
             'precio': Decimal(str(precio)),
-            'precio_original': Decimal(str(precio_original)),
             'rating': Decimal(str(round(random.uniform(3.5, 5.0), 1))),
             'estudiantes': str(random.randint(100, 50000)),
             'duracion': random.choice(self.durations),
@@ -154,7 +153,6 @@ def write_to_csv(courses: List[Dict], filename: str):
                 # Convertir Decimal a float para CSV y categorías a string
                 course_copy = course.copy()
                 course_copy['precio'] = float(course['precio'])
-                course_copy['precio_original'] = float(course['precio_original'])
                 course_copy['rating'] = float(course['rating'])
                 course_copy['categories'] = json.dumps(course['categories'])
                 writer.writerow(course_copy)
