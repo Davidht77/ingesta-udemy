@@ -11,8 +11,8 @@ TABLE_NAME = 'dev_cursos'  # Cambia según tu stage (dev_cursos, prod_cursos, et
 TENANT_ID = 'UDEMY'
 
 # Configuración del script
-TOTAL_COURSES = 2000  # Número total de cursos a generar
-BATCH_SIZE = 25       # Tamaño del lote para escritura en DynamoDB
+TOTAL_COURSES = 1000  # Número total de cursos a generar
+BATCH_SIZE = 20       # Tamaño del lote para escritura en DynamoDB
 DELAY_BETWEEN_BATCHES = 0.1  # Segundos de espera entre lotes para evitar throttling
 
 # Configuración de archivos
